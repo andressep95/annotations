@@ -1,4 +1,4 @@
-package cl.playground.annotations.model;
+package cl.playground.annotations.model.manytomany;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -42,11 +42,11 @@ public class UserProduct {
         columnDefinition = "DATE DEFAULT CURRENT_DATE"
     )
     private LocalDate orderDate;
+
+    @Embeddable
+    static class UserProductId {
+        private Long userId;
+        private Long productId;
+    }
 }
 
-@Embeddable
-class UserProductId implements java.io.Serializable {
-    private Long userId;
-    private Long productId;
-
-}

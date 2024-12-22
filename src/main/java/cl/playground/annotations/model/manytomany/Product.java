@@ -1,4 +1,4 @@
-package cl.playground.annotations.model;
+package cl.playground.annotations.model.manytomany;
 
 import jakarta.persistence.*;
 import lombok.*;
